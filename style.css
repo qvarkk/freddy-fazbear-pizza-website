@@ -1,6 +1,10 @@
-*, html, body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,500&display=swap');
+
+*, *::before, *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -9,7 +13,12 @@ a {
 }
 
 body {
+  margin: 0;
   background-color: #171717;
+}
+
+ul {
+  list-style: none;
 }
 
 .header {
@@ -47,9 +56,54 @@ body {
 
 .header-home,
 .header-order,
+.header-locations,
 .header-news {
   font-size: 22px;
   font-weight: 700;
+}
+
+.header-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-pf-menu {
+  position: absolute;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px 5px 15px;
+  border-radius: 8px;
+  right: 0px;
+  top: 58px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.7);
+}
+
+.header-pf-menu::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 0;
+  border: 10px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  box-shadow: 3px -3px 3px 0 rgba(0,0,0,.2);
+}
+
+.header-pf-profile,
+.header-pf-settings,
+.header-pf-logout {
+  text-align: center;
+  font-size: 22px;
+}
+
+.header-pf-settings {
+  border-top: 1px solid #1717177e;
+  border-bottom: 1px solid #1717177e;
 }
 
 .header-pfp {
