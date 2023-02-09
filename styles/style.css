@@ -16,8 +16,7 @@ body {
   margin: 0;
   background-color: #EEEEEE;
   /* TO MAKE FOOTER STICK TO THE BOTTOM */
-  /* ADD THESE TO BODY IN EVERY DOCUMENT
-     AND FLEX: 1 TO MAIN IN EVERY DOCUMENT*/
+  /* FLEX: 1 TO MAIN IN EVERY DOCUMENT*/
   display: flex;
   flex-direction: column;
   min-height: 100vh;
