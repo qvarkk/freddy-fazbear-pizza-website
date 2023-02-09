@@ -14,7 +14,7 @@ a {
 
 body {
   margin: 0;
-  background-color: #171717;
+  background-color: #EEEEEE;
 }
 
 ul {
@@ -22,44 +22,46 @@ ul {
 }
 
 .header {
-  height: 75px;
-  background-color: #f7f7f7;
+  height: 90px;
+  background-color: #00ADB5;
   display: flex;
-  justify-content: center;
-}
-
-.header-container {
-  margin: 0px 35px 0px 35px;
-  width: 1100px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 4px 2px rgba(0, 0, 0, .25);
+  padding: 0px 35px 0px 35px;
+  width: 100vw;
+  flex: 1;
 }
 
-.header-left-side {
+.header-center {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  flex: 1;
+  max-width: 525px;
 }
 
 .header-right-side {
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 120px;
 }
 
 .header-logo {
-  width: 60px;
-  height: 60px;
-  margin-right: 13px;
+  width: 106px;
+  height: 85px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .25));
 }
 
 .header-home,
 .header-order,
 .header-locations,
 .header-news {
-  font-size: 22px;
+  color: #EEEEEE;
+  font-size: 32px;
   font-weight: 700;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
 }
 
 .header-profile {
@@ -69,19 +71,20 @@ ul {
 
 .header-pf-menu {
   position: absolute;
-  background-color: #f7f7f7;
+  background-color: #EEEEEE;
   display: flex;
   flex-direction: column;
   padding: 5px 15px 5px 15px;
   border-radius: 8px;
-  right: 0px;
-  top: 58px;
+  right: 10px;
+  top: 78px;
   box-shadow: 0 0 3px 0 rgba(0,0,0,.7);
 }
 
 .header-pf-menu::before {
   content: "";
   position: absolute;
+  background-color: #EEEEEE;
   right: 15px;
   top: 0;
   border: 10px solid transparent;
@@ -107,9 +110,14 @@ ul {
 }
 
 .header-pfp {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
+  filter: drop-shadow(4px 3px rgba(0, 0, 0, .25));
+}
+
+.header-cart {
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, .25));
 }
 
 .inactive {
