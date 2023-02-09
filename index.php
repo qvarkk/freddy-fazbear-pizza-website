@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./styles/footer.css">
   <link rel="stylesheet" href="./styles/index_main.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="./js/index.js" defer></script>
   <title>Freddy's</title>
 </head>
 <body>
