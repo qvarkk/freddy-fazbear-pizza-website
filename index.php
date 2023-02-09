@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles/index_main.css">
   <link rel="stylesheet" href="./styles/style.css">
   <script src="./js/index.js" defer></script>
-  <title>Freddy's</title>
+  <title>Freddy's &middot; Home</title>
 </head>
 <body>
   <?php 
