@@ -11,15 +11,15 @@
 </head>
 <body>
   <header class="header">
-     <div class="header-left-side">
-       <img class="header-logo" src="./img/logo.png" alt="">
-     </div>
-     <div class="header-center">
-       <a class="header-home" href="">Home</a>
-       <a class="header-order" href="">Order</a>
-       <a class="header-locations" href="">Locations</a>
-       <a class="header-news" href="">News</a>
-     </div>
+    <div class="header-left-side">
+      <img class="header-logo" src="./img/logo.png">
+    </div>
+    <nav class="header-center">
+      <a class="header-home" href="">Home</a>
+      <a class="header-order" href="">Order</a>
+      <a class="header-locations" href="">Locations</a>
+      <a class="header-news" href="">News</a>
+    </nav>
 
      <div class="header-right-side">
        <div class="header-profile">
@@ -36,7 +36,31 @@
      </div>
   </header>
   
-  <main class="main"></main>
-  <footer class="footer"></footer>
+  <main class="main">
+    <div class="carousel-container">
+      <div class="carousel-filler">best offers carousel in future</div>
+    </div>
+    <div class="promo-filler">
+      <div class="promo-container">
+        <div class="promo-texts">
+          <p class="promo-code">FIRSTTIME2023</p>
+          <p class="promo-desc">30% OFF ON YOUR FIRST ORDER IN THIS BEAUTIFUL NEW YEAR!</p>
+        </div>
+        <button class="promo-button">Order Now!</button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <img class="footer-logo" src="./img/logo.png">
+      <nav class="footer-nav">
+        <a class="footer-home" href="">Home</a>
+        <a class="footer-order" href="">Order</a>
+        <a class="footer-locations" href="">Locations</a>
+        <a class="footer-news" href="">News</a>
+      </nav>
+      <p class="footer-copy">&copy; Freddy Fazbear's Pizza | 1944-2023</p>
+    </div>
+  </footer>
 </body>
 </html>
