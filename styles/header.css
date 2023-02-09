@@ -1,4 +1,5 @@
 .header {
+  position: fixed;
   height: 90px;
   background-color: #00ADB5;
   display: flex;

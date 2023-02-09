@@ -15,8 +15,6 @@ a {
 body {
   margin: 0;
   background-color: #EEEEEE;
-  /* TO MAKE FOOTER STICK TO THE BOTTOM */
-  /* FLEX: 1 TO MAIN IN EVERY DOCUMENT*/
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -24,4 +22,9 @@ body {
 
 .inactive {
   display: none;
+}
+
+.main {
+  margin-top: 95px;
+  flex: 1;
 }
