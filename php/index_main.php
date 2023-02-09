@@ -1,6 +1,6 @@
 <main class="main">
   <div class="carousel-container">
-    <div class="carousel-filler">best offers carousel in future</div>
+    <div class="carousel-filler">best offers carousel in future <?php if ($_POST["first_name"] != "") echo $_POST["first_name"]; ?></div>
   </div>
   <div class="promo-filler">
     <div class="promo-container">
