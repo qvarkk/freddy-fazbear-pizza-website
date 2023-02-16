@@ -7,6 +7,6 @@
       <a class="footer-locations" href="#">Locations</a>
       <a class="footer-news" href="#">News</a>
     </nav>
-    <p class="footer-copy">&copy; Freddy Fazbear's Pizza | 1944-2023</p>
+    <p class="footer-copy">&copy; Freddy Fazbear's Pizza | 1988-2023</p>
   </div>
 </footer>
