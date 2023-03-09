@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .country-name {
+      display: inline-block;
+    }
+
+    .luxembourg-flag,
+    .mauritania-flag {
+      outline: 2px solid rgba(0, 0, 0, 0.5);
+      display: inline-block;
+    }
+
+    .luxembourg-flag .stripe {
+      height: 100px;
+      width: 500px;
+    }
+
+    .stripe.red {
+      background-color: #ec2a2c;
+    }
+
+    .stripe.white {
+      background-color: #fcfefc;
+    }
+
+    .stripe.blue {
+      background-color: #04a2dc;
+    }
+
+    .mauritania-flag {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 300px;
+      width: 450px;
+      background-color: #02a95c;
+    }
+
+    .mauritania-flag .stripe {
+      height: 60px;
+      width: 100%;
+      background-color: #d11c20;
+      z-index: 4;
+    }
+
+    .star {
+      position: absolute;
+      top: 85px;
+      left: calc(50% - (65px / 2));
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
+      68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background-color: #fcd901;
+      height: 65px;
+      width: 65px;
+      z-index: 3;
+    }
+
+    .circle {
+      height: 175px;
+      width: 200px;
+      border-radius: 50%;
+      position: absolute;
+      left: calc(50% - (200px / 2));
+    }
+
+    .foreground {
+      background-color: #02a95c;
+      /* background-color: #d8d8d8; */
+      z-index: 2;
+    }
+
+    .background {
+      background-color: #fcd901;
+      z-index: 1;
+      top: 30px;
+    }
+    
+    img {
+      height: 100px;
+      width: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <img src="./img/logo_V2.png" alt="">
+  <!-- Можно добавить приколы над контейнером и ничего не будет -->
+  <div class="container">
+    <div class="luxembourg-flag">
+      <div class="stripe red"></div>
+      <div class="stripe white"></div>
+      <div class="stripe blue"></div>
+    </div>
+    <p class="country-name">Luxembourg</p>
+    <div class="mauritania-flag">
+      <div class="stripe"></div>
+      <div class="star"></div>
+      <div class="circle foreground"></div>
+      <div class="circle background"></div>
+      <div class="stripe"></div>
+    </div>
+    <p class="country-name">Mauritania</p>
+  </div>
+  <!-- И под контейнером тоже можно -->
+  <img src="./img/logo_V2.png" alt="">
+</body>
+</html>
