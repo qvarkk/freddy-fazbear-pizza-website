@@ -4,6 +4,7 @@
 
 .container {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 550px;
   margin-top: 70px;
   display: flex;
@@ -23,8 +24,9 @@
   max-width: 650px;
   margin: 0 auto;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+  grid-template: repeat(5, 1fr) / 1fr 1fr;
   row-gap: 25px;
+  column-gap: 10px;
 }
 
 .form-input {
@@ -72,4 +74,15 @@
   margin: 0 auto;
 
   box-shadow: 1px 2px 4px #00000062;
+}
+
+@media (max-width: 768px) {
+  .form {
+    font-size: 16px;
+    grid-template: repeat(10, 1fr) / 1fr;
+  }
+
+  .form-input {
+    font-size: 16px;
+  }
 }

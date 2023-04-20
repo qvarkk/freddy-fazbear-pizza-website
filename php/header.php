@@ -1,25 +1,23 @@
 <header class="header">
-  <div class="header-left-side">
-    <img class="header-logo" src="./img/logo.png">
-  </div>
-  <nav class="header-center">
-    <a class="header-home" href="./index.php">Home</a>
-    <a class="header-order" href="#">Order</a>
-    <a class="header-locations" href="#">Locations</a>
-    <a class="header-news" href="#">News</a>
-  </nav>
+  <img class="header-logo" src="./img/logo.png">
+  <img id="headerMenuBtn" class="header-menu-icon" src="./img/icons/side-menu.svg" alt="Menu">
 
-   <div class="header-right-side">
-     <div class="header-profile">
-       <img class="header-pfp" id="headerMenuBtn" src="./img/default-pfp.jpg" alt="Profile picture">
-       <div class="header-pf-menu inactive" id="headerMenu">
-         <a class="header-pf-profile" href="./register.php">Profile</a>
-        <a class="header-pf-settings" href="#">Settings</a>
-         <a class="header-pf-logout" href="#">Log Out</a>
-       </div>
-     </div>
-     <a class="header-cart" href="">
-       <img class="header-cart" src="./img/icons/shopping-cart.svg" alt="Cart">
-     </a>
-   </div>
+  <div id="sidebarMenu" class="header-menu inactive">
+    <div id="blackScreen" class="black-screen"></div>
+    
+    <div class="header-sidebar">
+      <img id="sidebarMenuBtn"  class="sidebar-menu-icon" src="./img/icons/side-menu.svg" alt="Menu">
+      <nav class="sidebar-nav">
+        <a class="header-profile" href="#">
+          <p class="sidebar-username">Name</p>
+          <img class="header-pfp" src="./img/default-pfp.jpg" alt="Profile picture">
+        </a>
+        <a class="header-home" href="./index.php">Home</a>
+        <a class="header-order" href="#">Order</a>
+        <a class="header-card" href="#">Cart</a>
+        <a class="header-locations" href="#">Places</a>
+        <a class="header-news" href="#">News</a>
+      </nav>
+    </div>
+  </div>
 </header>
