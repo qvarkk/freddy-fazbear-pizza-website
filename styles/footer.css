@@ -40,3 +40,28 @@
   font-size: 16px;
   grid-column: 1 / 4;
 }
+
+
+@media (max-width: 756px) {
+  .footer-container {
+    grid-template: 5fr 5fr 1fr / 1fr;
+  }
+
+  .footer-logo {
+    justify-self: center;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  .footer-nav {
+    justify-self: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .footer-copy {
+    grid-column: 1 / 2;
+  }
+}

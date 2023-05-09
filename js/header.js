@@ -14,3 +14,11 @@ sidebarMenuBtn.addEventListener('click', () => {
 blackScreen.addEventListener('click', () => {
   sidebarMenu.classList.add("inactive");
 });
+
+let serverNotif = document.querySelector("#serverNotif");
+
+if (serverNotif != null) {
+  setTimeout(() => {
+    serverNotif.classList.add("disappear");
+  }, 5000);
+}
