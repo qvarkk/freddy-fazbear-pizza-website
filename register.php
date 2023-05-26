@@ -19,7 +19,7 @@
   <main class="main">
     <div class="container">
       <h1 class="register-header">Register</h1>
-      <form action="auth.php?register=1" method="post" class="form" id="registerForm">
+      <form action="auth.php?register=1" method="post" class="form" id="registerForm" enctype="multipart/form-data">
         <label for="first_name">First Name</label>
         <input id="fNameInput" class="unfilled form-input fname-input" type="text" name="first_name" placeholder="Volodimir" pattern="^[A-Za-z\s]+" required>
         <label for="last_name">Last Name</label>
@@ -30,6 +30,8 @@
         <input id="pwdInput" class="unfilled form-input pwd-input" type="password" name="password" placeholder="********" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" maxlength="32" required>
         <label for="confpassword">Confirm Password</label>
         <input id="confPwdInput" class="unfilled form-input conf-pwd-input" type="password" name="confpassword" placeholder="********" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="8" maxlength="32" required>
+        <label for="profile_picture">Profile Picture (only .png)</label>
+        <input type="file" name="profile_picture" id="profilePicture" accept=".png">
       </form>
       <p class="login-para">Already have an account? <a class="login-anchor" href="./login.php">Log In</a>.</p>
       <button form="registerForm" type="submit" class="register-btn" value="Verify" name="verify">Register</button>
