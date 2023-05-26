@@ -5,9 +5,15 @@ session_start(["use_strict_mode" => true]);
 if (isset($_SESSION['email'])) {
   $link = 'profile.php';  
   $text = $_SESSION['email'];
+  if ($_SESSION['pfp'] != 'NULL') {
+    $pfp = 'data:image/png;base64,'.$_SESSION['pfp'];
+  } else {
+    $pfp = './img/default-pfp.jpg';
+  }
 } else {
   $link = 'login.php';
   $text = 'Login';
+  $pfp = './img/default-pfp.jpg';
 }
 
 if (isset($_SESSION['message'])) {
@@ -36,7 +42,7 @@ unset($_SESSION['message']);
           <p class="sidebar-username">
           <?php echo($text); ?>
           </p>
-          <img class="header-pfp" src="./img/default-pfp.jpg" alt="Profile picture">
+          <img class="header-pfp" src="<?php echo $pfp; ?>" alt="Profile picture">
         </a>
         <a class="header-home" href="./index.php">Home</a>
         <a class="header-order" href="#">Order</a>

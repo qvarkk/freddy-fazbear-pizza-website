@@ -7,6 +7,12 @@
     die();
   }
 
+  if ($_SESSION['pfp'] != 'NULL') {
+    $pfp = 'data:image/png;base64,'.$_SESSION['pfp'];
+  } else {
+    $pfp = './img/default-pfp.jpg';
+  }
+
 ?>
 
 
@@ -50,7 +56,7 @@
       </div>
       <div class="pf-other">
         <div class="buttons-side">
-          <img class="pfp" src="./img/default-pfp.jpg" alt="Profile Picture">
+          <img class="pfp" src="<?php echo $pfp; ?>" alt="Profile Picture">
           <button id="profBtn" class="profile-button" <?php if (!isset($_GET['option']) || $_GET['option'] == 1) echo('data-active'); ?>>Profile</button>
           <button id="addrBtn" class="addresses-button" <?php if (isset($_GET['option'])) { if ($_GET['option'] == 2) echo('data-active'); }  ?>>Addresses</button>
           <button id="ordrBtn" class="orders-button" <?php if (isset($_GET['option'])) { if ($_GET['option'] == 3) echo('data-active'); }  ?>>Orders</button>
