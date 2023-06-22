@@ -4,16 +4,10 @@ session_start(["use_strict_mode" => true]);
 
 if (isset($_SESSION['email'])) {
   $link = 'profile.php';  
-  $text = $_SESSION['email'];
-  if ($_SESSION['pfp'] != 'NULL') {
-    $pfp = 'data:image/png;base64,'.$_SESSION['pfp'];
-  } else {
-    $pfp = './img/default-pfp.jpg';
-  }
+  $text = 'Profile';
 } else {
   $link = 'login.php';
   $text = 'Login';
-  $pfp = './img/default-pfp.jpg';
 }
 
 if (isset($_SESSION['message'])) {
@@ -29,31 +23,17 @@ unset($_SESSION['message']);
 ?>
 
 <header class="header">
-  <a href="index.php"><img class="header-logo" src="./img/logo.png" draggable="false"></a>
-  <img id="headerMenuBtn" class="header-menu-icon" src="./img/icons/side-menu.svg" alt="Menu" draggable="false">
-
-  <div id="sidebarMenu" class="header-menu inactive">
-    <div id="blackScreen" class="black-screen"></div>
-    
-    <div class="header-sidebar">
-      <img id="sidebarMenuBtn"  class="sidebar-menu-icon" src="./img/icons/side-menu.svg" alt="Menu">
-      <nav class="sidebar-nav">
-        <a class="header-profile" href="<?php echo($link); ?>">
-          <p class="sidebar-username">
-          <?php echo($text); ?>
-          </p>
-          <img class="header-pfp" src="<?php echo $pfp; ?>" alt="Profile picture">
-        </a>
-        <a class="header-home" href="./index.php">Home</a>
-        <a class="header-order" href="#">Order</a>
-        <a class="header-card" href="#">Cart</a>
-        <a class="header-locations" href="#">Places</a>
-        <a class="header-news" href="#">News</a>
-        <?php
-          if (isset($_SESSION['email']))
-            echo('<a class="header-news" href="auth.php?logout=1">Log Out</a>');
-        ?>
-      </nav>
-    </div>
-  </div>
+  <nav class="nav">
+    <input type="checkbox" id="headerCheck">
+    <label for="headerCheck" class="header-check-btn">
+      <img src="/img/icons/side-menu.svg" class="header-check-img">
+    </label>
+    <a href="../index.php"><p class="nav-logo">FREDDY'S</p></a>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="<?php echo $link; ?>" class="nav-link"><?php echo $text; ?></a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Rent</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+    </ul>
+  </nav>
 </header>

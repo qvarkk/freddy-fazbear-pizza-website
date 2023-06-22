@@ -22,12 +22,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/footer.css">
-  <link rel="stylesheet" href="./styles/style.css">
+  <?php include_once 'php/link.php' ?>
   <link rel="stylesheet" href="./styles/profile_main.css">
-  <script src="./js/header.js" defer></script>
   <script src="./js/profile.js" defer></script>
   <title>Freddy's &middot; Profile</title>
 </head>
@@ -40,10 +36,10 @@
     $creds_query = $db->query("SELECT * FROM general.credentials WHERE email = '".$_SESSION['email']."'");
     $creds_row = $creds_query->fetch();
 
-    $user_query = $db->query("SELECT * FROM general.users WHERE id = ".$creds_row['user_id']);
+    $user_query = $db->query("SELECT * FROM general.users WHERE id = ".$_SESSION['user_id']);
     $user_row = $user_query->fetch();
 
-    $orders_query = $db->query("SELECT COUNT(*) FROM general.orders WHERE user_id = ".$user_row['id']);
+    $orders_query = $db->query("SELECT COUNT(*) FROM general.orders WHERE user_id = ".$_SESSION['user_id']);
     $orders_row = $orders_query->fetch();
   ?>
 
@@ -60,6 +56,7 @@
           <button id="profBtn" class="profile-button" <?php if (!isset($_GET['option']) || $_GET['option'] == 1) echo('data-active'); ?>>Profile</button>
           <button id="addrBtn" class="addresses-button" <?php if (isset($_GET['option'])) { if ($_GET['option'] == 2) echo('data-active'); }  ?>>Addresses</button>
           <button id="ordrBtn" class="orders-button" <?php if (isset($_GET['option'])) { if ($_GET['option'] == 3) echo('data-active'); }  ?>>Orders</button>
+          <button id="logoutBtn" class="logout-button"?>Logout</button>
         </div>
         <div class="info-side">
           <?php

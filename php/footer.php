@@ -1,12 +1,3 @@
 <footer class="footer">
-  <div class="footer-container">
-    <img class="footer-logo" src="./img/logo.png">
-    <nav class="footer-nav">
-      <a class="footer-home" href="./index.php">Home</a>
-      <a class="footer-order" href="#">Order</a>
-      <a class="footer-locations" href="#">Locations</a>
-      <a class="footer-news" href="#">News</a>
-    </nav>
-    <p class="footer-copy">&copy; Freddy Fazbear's Pizza | 1988-2023</p>
-  </div>
+  <p class="footer-text">&copy; Freddy's 2023 | All Rights Reserved</p>
 </footer>
